@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 
 const Posts = () => {
   const [postId, setPostId] = useState(null);
-  useEffect(() => {
-    console.log(postId);
-  }, [postId]);
   return (
     <div className='post-list'>
       <div>
