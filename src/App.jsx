@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import UseState from './components/samples/useState';
+import UseEffect from './components/samples/useEffect';
 
 const HOOKS = {
   useState: {
@@ -8,21 +9,26 @@ const HOOKS = {
   },
   useEffect: {
     name: 'useEffect',
-    component: <div>useEffect</div>,
+    component: <UseEffect />,
   },
 };
 
 function App() {
   const [showHook, setshowHook] = useState('useState');
+
+  const hooksButton = useMemo(
+    () =>
+      Object.keys(HOOKS).map((hookItem, index) => (
+        <button key={index} onClick={() => setshowHook(HOOKS[hookItem].name)}>
+          {hookItem}
+        </button>
+      )),
+    []
+  );
+
   return (
     <div className=''>
-      <div className='select-button-container'>
-        {Object.keys(HOOKS).map((hookItem, index) => (
-          <button key={index} onClick={() => setshowHook(HOOKS[hookItem].name)}>
-            {hookItem}
-          </button>
-        ))}
-      </div>
+      <div className='select-button-container'>{hooksButton}</div>
       <div>{HOOKS[showHook].component}</div>
     </div>
   );
