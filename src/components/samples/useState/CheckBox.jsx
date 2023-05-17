@@ -13,6 +13,7 @@ export default function MyCheckbox() {
         <input type='checkbox' checked={liked} onChange={handleChange} />I liked this
       </label>
       <button
+        onClick={() => setLiked(prv => !prv)}
         style={{
           background: liked ? 'red' : 'blue',
           margin: '1rem',

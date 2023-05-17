@@ -46,23 +46,33 @@ const NestedFormObj = () => {
     });
   }
 
+  function handleChangeInput({ target: { value, name } }) {
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        [name]: value,
+      },
+    });
+  }
+
   return (
     <>
       <label>
         Name:
-        <input value={person.name} onChange={handleNameChange} />
+        <input value={person.name} name='name' onChange={handleNameChange} />
       </label>
       <label>
         Title:
-        <input value={person.artwork.title} onChange={handleTitleChange} />
+        <input value={person.artwork.title} name={'title'} onChange={handleTitleChange} />
       </label>
       <label>
         City:
-        <input value={person.artwork.city} onChange={handleCityChange} />
+        <input value={person.artwork.city} name={'city'} onChange={handleCityChange} />
       </label>
       <label>
         Image:
-        <input value={person.artwork.image} onChange={handleImageChange} />
+        <input value={person.artwork.image} name={'image'} onChange={handleImageChange} />
       </label>
       <p>
         <i>{person.artwork.title}</i>

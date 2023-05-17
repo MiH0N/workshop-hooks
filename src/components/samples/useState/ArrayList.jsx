@@ -21,11 +21,13 @@ export default function ArrayList() {
 
   const handleAddTodo = () => {
     /// you need to create a new one (or make a copy of an existing one), and then set state to use the new array.
-    let _newArray = todos;
-    _newArray.push({
-      id: todos.length,
-      text: text,
-    });
+    let _newArray = [
+      {
+        id: todos.length,
+        text: text,
+      },
+      ...todos,
+    ];
     setText('');
     setTodos(_newArray);
   };

@@ -5,6 +5,9 @@ function RepeatMessage({ message }) {
     const id = setInterval(() => {
       if (!!message) console.log(message);
     }, 5000);
+    return () => {
+      clearInterval(id);
+    };
   }, [message]);
 
   return <div>I'm logging to console "{message}"</div>;

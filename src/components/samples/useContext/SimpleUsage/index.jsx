@@ -4,7 +4,7 @@ const ThemeContext = createContext(null);
 
 export default function SimpleUsage() {
   return (
-    <ThemeContext.Provider value='dark'>
+    <ThemeContext.Provider value='light'>
       <Form />
     </ThemeContext.Provider>
   );
