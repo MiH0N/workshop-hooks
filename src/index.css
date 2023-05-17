@@ -106,3 +106,28 @@ input {
 .todo-item h6 {
   margin: 0.5rem;
 }
+
+
+.button-light {
+  background-color: #60db9f;
+  margin-right: 1rem;
+}
+.button-dark {
+  background-color: #1b3428;
+  color:#60db9f;
+  margin-right: 1rem;
+}
+
+.panel-light {
+  padding: 2rem;
+  background: white;
+}
+.panel-dark {
+  padding: 2rem;
+  background-color: #000001;
+  color: white;
+}
+
+.context-task-item * {
+  margin: .5rem;
+}
