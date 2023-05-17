@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import UseState from './components/samples/useState';
 import UseEffect from './components/samples/useEffect';
+import UseContext from './components/samples/useContext';
 
 const HOOKS = {
   useState: {
@@ -10,6 +11,10 @@ const HOOKS = {
   useEffect: {
     name: 'useEffect',
     component: <UseEffect />,
+  },
+  useContext: {
+    name: 'useContext',
+    component: <UseContext />,
   },
 };
 
