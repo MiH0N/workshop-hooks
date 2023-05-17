@@ -18,7 +18,7 @@ const AnySideEffect = () => {
 };
 
 const connectServer = () => {
-  //   console.log('connect to server');
+  console.log('connect to server');
 };
 
 const ChildrenExample = props => {
@@ -27,7 +27,7 @@ const ChildrenExample = props => {
   useEffect(() => {
     // console.log(props);
     connectServer();
-  });
+  }, [text]);
 
   function handleChange(e) {
     setText(e.target.value);
