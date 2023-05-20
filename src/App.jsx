@@ -3,9 +3,7 @@ import UseState from './components/samples/useState';
 import UseEffect from './components/samples/useEffect';
 import UseRef from './components/samples/useRef';
 import UseReducer from './components/samples/useReducer';
-
-
-
+import UseContext from './components/samples/useContext';
 
 const HOOKS = {
   useState: {
@@ -23,7 +21,11 @@ const HOOKS = {
   useReducer: {
     name: 'useReducer',
     component: <UseReducer />,
-  }
+  },
+  useContext: {
+    name: 'useContext',
+    component: <UseContext />,
+  },
 };
 
 function App() {

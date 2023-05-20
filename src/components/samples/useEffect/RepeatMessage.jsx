@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 function RepeatMessage({ message }) {
   useEffect(() => {
     const id = setInterval(() => {
-      // console.log(message);
-    }, 2000);
+      if (!!message) console.log(message);
+    }, 5000);
     return () => {
       clearInterval(id);
     };
