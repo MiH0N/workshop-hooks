@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import UseState from './components/samples/useState';
 import UseEffect from './components/samples/useEffect';
+import UseRef from './components/samples/useRef';
+import UseReducer from './components/samples/useReducer';
 import UseContext from './components/samples/useContext';
 
 const HOOKS = {
@@ -11,6 +13,14 @@ const HOOKS = {
   useEffect: {
     name: 'useEffect',
     component: <UseEffect />,
+  },
+  useRef: {
+    name: 'useRef',
+    component: <UseRef />,
+  },
+  useReducer: {
+    name: 'useReducer',
+    component: <UseReducer />,
   },
   useContext: {
     name: 'useContext',
